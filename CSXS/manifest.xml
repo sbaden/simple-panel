@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExtensionManifest Version="4.0" ExtensionBundleId="com.example.SimplePanel" ExtensionBundleVersion="1.0.0"
-ExtensionBundleName="SimplePanel" 
+<ExtensionManifest Version="4.0" ExtensionBundleId="com.example.RenderManager" ExtensionBundleVersion="1.0.0"
+ExtensionBundleName="RenderManager" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ExtensionList>
-		<Extension Id="com.example.SimplePanel" Version="1.0" />
+		<Extension Id="com.example.RenderManager" Version="1.0" />
 	</ExtensionList>
 	<ExecutionEnvironment>
 		<HostList>
-			<Host Name="PPRO" Version="11.0" />
+			<Host Name="PPRO" Version="9.0" />
+			<Host Name="AEFT" Version="[13.0,15.9]" />
 		</HostList>
 		<CEFCommandLine>
 		    <Parameter>--allow-file-access</Parameter>
@@ -22,22 +23,22 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	</ExecutionEnvironment>
 
 	<DispatchInfoList>
-		<Extension Id="com.example.SimplePanel">
+		<Extension Id="com.example.RenderManager">
 			<DispatchInfo >
 				<Resources>
 					<MainPath>./index.html</MainPath>
-					<ScriptPath>./filePaths.jsx</ScriptPath>
+					<ScriptPath>./jsx/filePaths.jsx</ScriptPath>
 				</Resources>
 				<Lifecycle>
 					<AutoVisible>true</AutoVisible>
 				</Lifecycle>
 				<UI>
 					<Type>Panel</Type>
-					<Menu>SimplePanel</Menu>
+					<Menu>Render Manager</Menu>
 					<Geometry>
 						<Size>
-							<Height>400</Height>
-							<Width>200</Width>
+							<Height>600</Height>
+							<Width>300</Width>
 						</Size>
 					</Geometry>
 				</UI>
